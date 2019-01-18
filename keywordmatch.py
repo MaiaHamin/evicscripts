@@ -111,32 +111,34 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n, g_n):
 
 if __name__ == "__main__":
     questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-    startcol = 3
     startrow = 0
-    try:
-        for state in states:
-            state_ind = startrow
-            laws = allfilenames[state_ind]
-            prefix = prefixes[state_ind]
-            print(prefix)
-            print(laws)
-            print(prefix)
+    for state in states:
+        startcol = 3
+        state_ind = startrow
+        laws = allfilenames[state_ind]
+        lawfilenames = []
+        for law in laws:
+            lawfilenames.append("./" + state + "/" + law)
+        prefix = prefixes[state_ind]
+        print(prefix)
+        print(lawfilenames)
+        print(prefix)
 
-            keyword_dict = get_keywords(questions)
-            for q in questions:
-                keywords = keyword_dict[q]
-                print(keywords)
-                matches, count_dict, line_count = getmatches(keywords, laws, prefix)
-                ranked = rankmatches(keywords, count_dict, line_count, matches, 5, 4)
-                #for m in ranked:
-                    #print('-----------------------------------------------------------------')
-                    #print(m[0])
-                    #print(matches[m[0]])
-                outsheet.write(startrow + 1, startcol, ranked[0][0])
-                startcol += 1
-                outsheet.write(startrow + 1, startcol, matches(ranked[0][0]))
-                startcol += 4
-            startrow += 1
-
-    except:
-        print("this state isn't in the list >:(")
+        keyword_dict = get_keywords(questions)
+        for q in questions:
+            keywords = keyword_dict[q]
+            print(keywords)
+            matches, count_dict, line_count = getmatches(keywords, lawfilenames, prefix)
+            ranked = rankmatches(keywords, count_dict, line_count, matches, 5, 4)
+            if len(ranked) > 0:
+                outr = ranked[0][0]
+                outm = matches[ranked[0][0]]
+            else:
+                outr = ""
+                outm = ""
+            outsheet.write(startrow + 1, startcol, outr)
+            startcol += 1
+            outsheet.write(startrow + 1, startcol, outm)
+            startcol += 4
+        startrow += 1
+    outxl.save('Generated.xls')
