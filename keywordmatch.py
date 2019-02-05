@@ -9,7 +9,9 @@ import numpy as np
 import sys
 import xlwt
 
+# Add new states
 states = ["AL", "FL", "MD", "NV", "SC", "TX"]
+# data from Jon Mayer?
 allfilenames = [
 ["AlabamaProperty.txt", "AlabamaPropertyA.txt"],
 ["FLLaws.txt", "FLLaws2.txt", "FLResTen.txt", "FLEject.txt", "FL3.txt"],
@@ -125,6 +127,7 @@ if __name__ == "__main__":
         print(prefix)
 
         keyword_dict = get_keywords(questions)
+
         for q in questions:
             keywords = keyword_dict[q]
             print(keywords)
