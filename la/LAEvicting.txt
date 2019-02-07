@@ -1,0 +1,503 @@
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants
+LSA-C.C.P. Bk. VII, T. XI, Refs & Annos
+Currentness
+Editors’ Notes
+INTRODUCTION--1960
+
+These articles were drawn from former R.S. 13:4911, dealing with “occupants holding by accommodation of the owner or any other occupant” and 13:4918, dealing with persons as to whom the lessor-lessee relationship exists. As to the procedure after the initial notices, there is provided one system applicable to both of these basic situations, drawn from former R.S. 13:4911-13:4916 and 13:4918-13:4925.
+ 
+
+LSA-C.C.P. Bk. VII, T. XI, Refs & Annos, LA C.C.P. Bk. VII, T. XI, Refs & Annos
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants
+Chapter 1. General Dispositions
+LSA-C.C.P. Bk. VII, T. XI, Ch. 1, Refs & Annos
+Currentness
+Editors’ Notes
+SUMMARY OF PROCEDURAL CHANGES IN TITLE 11--1960
+
+By Henry G. McMahon
+ 
+
+1. Three changes in the procedural rules are made by Art. 4701. First, the notice to vacate must allow the tenant or occupant at least 5 days to vacate in all cases. Under the prior law, the vacate notice had to allow at least 5, 10, or 30 days, dependent on the circumstances. Second, in the case of a lease having a definite term, this article allows the lessor to anticipate that his tenant will not vacate the premises at the end of the term and to give the necessary vacate notice prior to its expiration, so that court action may be taken as soon as the term has ended. Third, the lessor is prevented, in cases where the lease is for a definite term, from giving notice to vacate in the lease itself.
+ 
+
+2. Art. 4733 changes the procedural law slightly, at least in theory. It suppressed that portion of its source provision which allowed the plaintiff to recover his costs “out of any goods and chattels of the defendant subject to seizure”.
+ 
+
+3. The limitations upon the right of an appeal which heretofore applied only to a tenant are now made applicable to all occupants by Art. 4735.
+ 
+
+Caveat
+ 
+
+In eviction proceedings in a district court (Parish of Orleans excepted) where its jurisdiction is concurrent with that of a justice of the peace, the judge (and not the district court clerk) must render and sign the eviction judgment, even though the defendant may not appear. Arts. 4732, 4972.
+ 
+
+LSA-C.C.P. Bk. VII, T. XI, Ch. 1, Refs & Annos, LA C.C.P. Bk. VII, T. XI, Ch. 1, Refs & Annos
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 1. General Dispositions (Refs & Annos)
+LSA-C.C.P. Art. 4701
+Art. 4701. Termination of lease; notice to vacate; waiver of notice
+Currentness
+
+
+When a lessee’s right of occupancy has ceased because of the termination of the lease by expiration of its term, action by the lessor, nonpayment of rent, or for any other reason, and the lessor wishes to obtain possession of the premises, the lessor or his agent shall cause written notice to vacate the premises to be delivered to the lessee. The notice shall allow the lessee not less than five days from the date of its delivery to vacate the leased premises.
+ 
+
+If the lease has no definite term, the notice required by law for its termination shall be considered as a notice to vacate under this Article. If the lease has a definite term, notice to vacate may be given not more than thirty days before the expiration of the term.
+ 
+
+A lessee may waive the notice requirements of this Article by written waiver contained in the lease, in which case, upon termination of the lessee’s right of occupancy for any reason, the lessor or his agent may immediately institute eviction proceedings in accordance with Chapter 2 of Title XI of the Louisiana Code of Civil Procedure.
+ 
+
+Credits
+
+Amended by Acts 1981, No. 713, § 1.
+ 
+Editors’ Notes
+OFFICIAL REVISION COMMENTS
+
+(a) This article covers all cases of termination of lease, regardless of the cause, and fixes a notice period of five days. It represents a change in the prior law under which the notice was five, ten, or thirty days, depending upon the circumstances. The article also permits the lessor in the case of a lease having a fixed term to anticipate that the tenant will not vacate the premises at the end of the term and to give him the necessary notice prior to its expiration, so that he may take court action as soon as the term is over.
+ 
+
+(b) The word “limitation”, which appears in former R.S. 13:4918, has been omitted. See 2 La.L.Rev. 161 (1940). See, also, 21 Tul.L.Rev. 256 (1946).
+ 
+
+(c) If the lease has already terminated and the tenant remains on the premises, the substantive problem of reconduction then enters the picture. See 21 Tul.L.Rev. 256 (1946). The above text applies to the “reconducted” lease, which is a new lease and not a continuation of the old lease. See 1 La.L.Rev. 439 (1939). The term of this reconducted lease is fixed by Civil Code Arts. 2686-2691, and it is not necessary to include these substantive provisions in an article on eviction. The notice of ten days provided for by Art. 2686 of the Civil Code is a device to prevent reconduction, and is not to be confused with the ten day notice of eviction, although presumably one notice could serve both purposes.
+ 
+
+Notes of Decisions (378)
+
+LSA-C.C.P. Art. 4701, LA C.C.P. Art. 4701
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 1. General Dispositions (Refs & Annos)
+LSA-C.C.P. Art. 4702
+Art. 4702. Notice to occupant other than tenant to vacate
+Currentness
+
+
+When an owner of immovable property wishes to evict the occupant therefrom, after the purpose of the occupancy has ceased, the owner, or his agent, shall first cause a written notice to vacate the property to be delivered to the occupant.
+ 
+
+This notice shall allow the occupant five days from its delivery to vacate the premises.
+ 
+Editors’ Notes
+OFFICIAL REVISION COMMENTS
+
+(a) No change in the law is made by this article.
+ 
+
+(b) See Art. 3663, supra, which makes injunctive relief available against squatters.
+ 
+
+(c) In a judicial sale, the adjudicatee can obtain possession by eviction by use of the applicable provisions of R.S. 13:4346.
+ 
+
+(d) See Comments under Art. 4704, infra.
+ 
+
+Notes of Decisions (74)
+
+LSA-C.C.P. Art. 4702, LA C.C.P. Art. 4702
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 1. General Dispositions (Refs & Annos)
+LSA-C.C.P. Art. 4703
+Art. 4703. Delivery or service when premises abandoned or closed, or whereabouts of tenant or occupant unknown
+Currentness
+
+
+If the premises are abandoned or closed, or if the whereabouts of the lessee or occupant is unknown, all notices, process, pleadings, and orders required to be delivered or served on the lessee or occupant under this Title may be attached to a door of the premises, and this shall have the same effect as delivery to, or personal service on, the lessee or occupant.
+ 
+Editors’ Notes
+OFFICIAL REVISION COMMENT
+
+This article effects no change in the law.
+ 
+
+Notes of Decisions (16)
+
+LSA-C.C.P. Art. 4703, LA C.C.P. Art. 4703
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 1. General Dispositions (Refs & Annos)
+LSA-C.C.P. Art. 4704
+Art. 4704. Definitions
+Currentness
+
+
+Unless the context clearly indicates otherwise, as used in this Title the following terms have the following meanings:
+ 
+
+“Lease” means any oral or written lease, and includes a sublease;
+ 
+
+“Lessee” includes a sublessee, whether the person seeking to evict is a lessor or sublessor; and an assignee of a lessee;
+ 
+
+“Lessor” includes a sublessor, assignee, or transferee;
+ 
+
+“Occupant” includes a sharecropper; half hand; day laborer; former owner; and any person occupying immovable property by permission or accommodation of the owner, former owner, or another occupant, except a mineral lessee, owner of a mineral servitude, or a lessee of the owner;
+ 
+
+“Owner” includes a lessee; and
+ 
+
+“Premises” includes the land and all buildings and improvements thereon leased by a tenant, or possessed by an occupant.
+ 
+
+Notes of Decisions (16)
+
+LSA-C.C.P. Art. 4704, LA C.C.P. Art. 4704
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 1. General Dispositions (Refs & Annos)
+LSA-C.C.P. Art. 4705
+Art. 4705. Lessors’ rights or real actions not affected
+Currentness
+
+
+Nothing in this Title shall be construed to deprive any lessor of any remedy heretofore allowed him either for the payment of rent due to him or for the seizure of any furniture found on the leased premises; and nothing in this Title shall be construed to conflict with the provisions of Articles 3651 through 3664.
+ 
+
+Notes of Decisions (14)
+
+LSA-C.C.P. Art. 4705, LA C.C.P. Art. 4705
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants
+Chapter 2. Procedure
+LSA-C.C.P. Bk. VII, T. XI, Ch. 2, Refs & Annos
+Currentness
+
+LSA-C.C.P. Bk. VII, T. XI, Ch. 2, Refs & Annos, LA C.C.P. Bk. VII, T. XI, Ch. 2, Refs & Annos
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 2. Procedure (Refs & Annos)
+LSA-C.C.P. Art. 4731
+Art. 4731. Rule to show cause why possession should not be delivered; abandonment of premises
+Currentness
+
+
+A. If the lessee or occupant fails to comply with the notice to vacate required under this Title, or if the lessee has waived his right to notice to vacate by written waiver contained in the lease, and has lost his right of occupancy for any reason, the lessor or owner, or agent thereof, may cause the lessee or occupant to be cited summarily by a court of competent jurisdiction to show cause why he should not be ordered to deliver possession of the premises to the lessor or owner. The rule to show cause shall state the grounds upon which eviction is sought.
+ 
+
+B. After the required notice has been given, the lessor or owner, or agent thereof, may lawfully take possession of the premises without further judicial process, upon a reasonable belief that the lessee or occupant has abandoned the premises. Indicia of abandonment include a cessation of business activity or residential occupancy, returning keys to the premises, and removal of equipment, furnishings, or other movables from the premises.
+ 
+
+Credits
+
+Amended by Acts 1981, No. 713, § 1; Acts 1991, No. 684, § 1.
+ 
+Editors’ Notes
+OFFICIAL REVISION COMMENTS
+
+(a) This article follows the source provisions and provides the procedure to be followed after the notice to vacate has been given.
+ 
+
+(b) Under the provisions of R.S. 37:213, it is necessary for the agent to engage an attorney to institute the eviction proceeding.
+ 
+
+Notes of Decisions (91)
+
+LSA-C.C.P. Art. 4731, LA C.C.P. Art. 4731
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 2. Procedure (Refs & Annos)
+LSA-C.C.P. Art. 4732
+Art. 4732. Trial of rule; judgment of eviction
+Currentness
+
+
+A. The court shall make the rule returnable not earlier than the third day after service thereof, at which time the court shall try the rule and hear any defense which is made.
+ 
+
+B. If the court finds the lessor or owner entitled to the relief sought, or if the lessee or occupant fails to answer or to appear at the trial, the court shall render immediately a judgment of eviction ordering the lessee or occupant to deliver possession of the premises to the lessor or owner. The judgment of eviction shall be effective for not less than ninety days.
+ 
+
+Credits
+
+Amended by Acts 2001, No. 24, § 1.
+ 
+Editors’ Notes
+OFFICIAL REVISION COMMENT
+
+The only change effected by this article is the clarification of the return day.
+ 
+
+Notes of Decisions (98)
+
+LSA-C.C.P. Art. 4732, LA C.C.P. Art. 4732
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 2. Procedure (Refs & Annos)
+LSA-C.C.P. Art. 4733
+Art. 4733. Warrant for possession if judgment of eviction not complied with
+Currentness
+
+
+If the lessee or occupant does not comply with the judgment of eviction within twenty-four hours after its rendition, the court shall issue immediately a warrant directed to and commanding its sheriff, constable, or marshal to deliver possession of the premises to the lessor or owner.
+ 
+Editors’ Notes
+OFFICIAL REVISION COMMENT
+
+This article follows the source provisions except that the language relating to the payment of costs “out of any goods and chattels of the defendant subject to seizure” has been deleted as unworkable and unrealistic.
+ 
+
+Notes of Decisions (15)
+
+LSA-C.C.P. Art. 4733, LA C.C.P. Art. 4733
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 2. Procedure (Refs & Annos)
+LSA-C.C.P. Art. 4734
+Art. 4734. Execution of warrant
+Currentness
+
+
+The sheriff, constable, or marshal shall execute a warrant rendered under Article 4733 in the presence of two witnesses, by clearing the premises of any property therein, in order to put the lessor or owner in possession of the premises.
+ 
+
+If the sheriff, constable, or marshal finds the windows, doors, or gates of the premises locked or barred, he shall break open any of these when necessary to effect convenient entry into the premises.
+ 
+Editors’ Notes
+OFFICIAL REVISION COMMENT
+
+This article effects no change in the law.
+ 
+
+Notes of Decisions (4)
+
+LSA-C.C.P. Art. 4734, LA C.C.P. Art. 4734
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 2. Procedure (Refs & Annos)
+LSA-C.C.P. Art. 4735
+Art. 4735. Appeal; bond
+Currentness
+
+
+An appeal does not suspend execution of a judgment of eviction unless the defendant has answered the rule under oath, pleading an affirmative defense entitling him to retain possession of the premises, and the appeal has been applied for and the appeal bond filed within twenty-four hours after the rendition of the judgment of eviction. The amount of the suspensive appeal bond shall be determined by the court in an amount sufficient to protect the appellee against all such damage as he may sustain as a result of the appeal.
+ 
+Editors’ Notes
+OFFICIAL REVISION COMMENTS
+
+(a) Heretofore, the source provision was applicable only where the lessor-lessee relationship existed. This article applies to all cases regardless of the relationship between the parties.
+ 
+
+(b) This article codifies the jurisprudential rule that a suspensive appeal from the judgment must be taken within twenty-four hours. Audubon v. Brounig, 119 La. 1070, 44 So. 891 (1907); State ex rel. Mallu v. Judge, 128 La. 914, 55 So. 574 (1911).
+ 
+
+Notes of Decisions (156)
+
+LSA-C.C.P. Art. 4735, LA C.C.P. Art. 4735
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 2. Procedure (Refs & Annos)
+LSA-C.C.P. Art. 4736
+Arts. 4736 to 4759. [Blank]
+Currentness
+
+
+LSA-C.C.P. Art. 4736, LA C.C.P. Art. 4736
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 2. Procedure (Refs & Annos)
+LSA-C.C.P. Art. 4759
+Arts. 4736 to 4759. [Blank]
+Currentness
+
+
+LSA-C.C.P. Art. 4759, LA C.C.P. Art. 4759
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 2. Procedure (Refs & Annos)
+LSA-C.C.P. Art. 4760
+Arts. 4760 to 4830. Reserved for future legislation
+Currentness
+
+
+LSA-C.C.P. Art. 4760, LA C.C.P. Art. 4760
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Code of Civil Procedure (Refs & Annos)
+Book VII. Special Proceedings
+Title XI. Eviction of Tenants and Occupants (Refs & Annos)
+Chapter 2. Procedure (Refs & Annos)
+LSA-C.C.P. Art. 4830
+Arts. 4760 to 4830. Reserved for future legislation
+Currentness
+
+
+LSA-C.C.P. Art. 4830, LA C.C.P. Art. 4830
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+

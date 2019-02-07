@@ -10,11 +10,12 @@ import sys
 import xlwt
 
 # Add new states
-states = ["AL", "FL", "MD", "NV", "SC", "TX"]
+states = ["AL", "FL", "LA", "MD", "NV", "SC", "TX"]
 # data from Jon Mayer?
 allfilenames = [
 ["AlabamaProperty.txt", "AlabamaPropertyA.txt"],
 ["FLLaws.txt", "FLLaws2.txt", "FLResTen.txt", "FLEject.txt", "FL3.txt"],
+["LAEvicting.txt", "LASaleEviction.txt"],
 ["MarylandLandlordsTenants.txt"],
 ["NVLaws.txt", "NVLaws2.txt"],
 ["SCEjectment.txt", "SCLandlordTenGen.txt", "SCResLandlordTen.txt", "SCLeaseholdEstates.txt"],
@@ -22,6 +23,7 @@ allfilenames = [
 prefixes = [
 "Ala.Code 1975 §",
 "West’s F.S.A. §",
+"LSA-C.C.P.",
 "MD Code, Real Property, §",
 "N.R.S.",
 "Code 1976 §",

@@ -1,0 +1,632 @@
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2500
+Art. 2500. Eviction, definition, scope of warranty
+Currentness
+
+
+The seller warrants the buyer against eviction, which is the buyer’s loss of, or danger of losing, the whole or part of the thing sold because of a third person’s right that existed at the time of the sale. The warranty also covers encumbrances on the thing that were not declared at the time of the sale, with the exception of apparent servitudes and natural and legal nonapparent servitudes, which need not be declared.
+ 
+
+If the right of the third person is perfected only after the sale through the negligence of the buyer, though it arises from facts that took place before, the buyer has no claim in warranty.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENTS--1993
+
+(a) This Article reproduces the substance of Articles 2500, 2501, 2502, and 2515 of the Civil Code of 1870. It changes the law only insofar as it gives legislative recognition to the danger of loss as a circumstance that is as operative as an actual loss. See Bonvillain v. Bodenheimer, 117 La. 793, 42 So. 273 (1906); McDonold & Coon v. Vaughan, 14 La.Ann. 716 (1859); Landry v. Gamet, 1 Rob. 362 (1842).
+ 
+
+(b) Under this Article, the buyer need not be actually dispossessed of the thing in order to sustain an eviction loss; eviction may take place while the buyer remains in possession of the property, as when the buyer inherits it, or acquires it by purchase from the true owner. See Landry v. Gamet, 1 Rob. 362 (1842); Thomas v. Clement, 11 Rob. 397 (1845); McDonold & Coon v. Vaughan, 14 La. 716 (1859).
+ 
+
+(c) Under this Article, the assignee of an option to buy immovable property cannot sue the assignor for eviction where the property owner-grantor’s title is defective, since the seller or transferor of an option to buy immovable property does not warrant title to the immovable. Ratcliff v. McIlhenny, 157 La. 708, 102 So. 878 (1925).
+ 
+
+(d) The text of this Article allows the elimination of Article 2515 of the Louisiana Civil Code of 1870 without intending any change in the law. It is clear that an eviction caused by a nonapparent servitude is a partial eviction. See Art. 2511, infra.
+ 
+
+(e) Under this Article a pipeline servitude that prohibits the erection of improvements above the line is a nonapparent servitude. See Collins v. Slocum, 317 So.2d 672 (La.App. 3d Cir.1975).
+ 
+
+(f) This Article is consistent with the holding in Collins v. Slocum, 317 So.2d 672 (La.App. 3d Cir.1975), to the effect that the buyer of an immovable encumbered by a nonapparent servitude, which was not declared at the time of the contract, is entitled to rescission of the sale plus damages.
+ 
+
+Notes of Decisions (250)
+
+LSA-C.C. Art. 2500, LA C.C. Art. 2500
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2501
+Art. 2501. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2501, LA C.C. Art. 2501
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2502
+Art. 2502. Transfer of rights to a thing
+Currentness
+
+
+A person may transfer to another whatever rights to a thing he may then have, without warranting the existence of any such rights. In such a case the transferor does not owe restitution of the price to the transferee in case of eviction, nor may that transfer be rescinded for lesion.
+ 
+
+Such a transfer does not give rise to a presumption of bad faith on the part of the transferee and is a just title for the purposes of acquisitive prescription.
+ 
+
+If the transferor acquires ownership of the thing after having transferred his rights to it, the after-acquired title of the transferor does not inure to the benefit of the transferee.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENTS--1993
+
+(a) This Article is new. It does not change the law, however. It gives legislative formulation to conclusions clearly established by the Louisiana jurisprudence. See Waterman et al. v. Tidewater Associated Oil Co. et al., 213 La. 588, 35 So.2d 225 (La.1947); Read v. Hewitt, 120 La. 288, 45 So. 143 (La.1907); Land Development Co. v. Schulz, 169 La. 1, 124 So. 125 (La.1929).
+ 
+
+(b) This Article describes the effects of an act of the kind called a quitclaim deed at common law. See Waterman et al. v. Tidewater Associated Oil Co. et al., 213 La. 588, 35 So.2d 225 (La.1947); Read v. Hewitt, 120 La. 288, 45 So. 143 (La.1907); Land Development Co. v. Schulz, 169 La. 1, 124 So. 125 (La.1929).
+ 
+
+(c) At common law, the distinguishing factor of a quitclaim deed is that it is an instrument that purports to convey nothing more than the interest or estate of the grantor, if any he has, at the time of the conveyance, rather than the property itself. See 3 A.L.R. 945 (1919); Moelle v. Sherwood, 148 U.S. 21, 13 Sup.Ct. 426, 37 L.Ed. 350 (1893); Van Rensselaer v. Kearney, 11 How. 297, 13 L.Ed. 703 (1850). Conveyance by quitclaim does not include any implication that the vendor has good title to the property, or even that he has any title at all. Thus, the purchaser by quitclaim deed is put on immediate notice that he is not acquiring land but merely the interest of his vendor in the land. See Waterman et al. v. Tidewater Associated Oil Co. et al., 213 La. 588, 35 So.2d 225 (La.1947).
+ 
+
+What is called quitclaim at common law is an assignment of rights without warranty in the civil law. See Spanish Civil Code, Article 1529.
+ 
+
+(d) While the fact that a sale is by quitclaim deed may be regarded as an indication that the seller lacked faith in his title, it does not necessarily indicate that the purchaser lacked faith in the seller’s title to the property. Land Development Co. v. Schulz, 169 La. 1, 124 So. 125 (La.1929); Cherami v. Cantrelle, 174 La. 995, 142 So. 150 (La.1932).
+ 
+
+Notes of Decisions (13)
+
+LSA-C.C. Art. 2502, LA C.C. Art. 2502
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2503
+Art. 2503. Modification or exclusion of warranty, seller’s liability for personal acts, restitution of price in case of eviction
+Currentness
+
+
+The warranty against eviction is implied in every sale. Nevertheless, the parties may agree to increase or to limit the warranty. They may also agree to an exclusion of the warranty, but even in that case the seller must return the price to the buyer if eviction occurs, unless it is clear that the buyer was aware of the danger of eviction, or the buyer has declared that he was buying at his peril and risk, or the seller’s obligation of returning the price has been expressly excluded.
+ 
+
+In all those cases the seller is liable for an eviction that is occasioned by his own act, and any agreement to the contrary is null.
+ 
+
+The buyer is subrogated to the rights in warranty of the seller against other persons, even when the warranty is excluded.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENTS--1993
+
+(a) This Article reproduces the substance of Articles 2503-2505 of the Louisiana Civil Code of 1870. It does not change the law.
+ 
+
+(b) Under this Article, the seller is estopped to deny the sufficiency of his vendee’s title. Boyet v. Perryman, 240 La. 339, 123 So.2d 79 (1960); Louisiana Canal Company v. Leger, 237 La. 936, 112 So.2d 667 (1959); Arnett v. Marshall, 210 La. 932, 28 So.2d 665 (1946).
+ 
+
+(c) Under this Article, only actual and not merely constructive knowledge of the danger of eviction at the time of the sale will suffice to defeat a warranty action when a sale is made with an exception to the warranty clause. Bielawski v. Landry, 397 So.2d 861 (La.App. 4th Cir.1981); Collins v. Slocum, 317 So.2d 672 (La.App. 3d Cir.1975).
+ 
+
+(d) In New Orleans & Carrollton R.R. Co. v. Jourdain’s Heirs, 34 La.Ann. 648 (1882), the Louisiana Supreme Court held that, in a sale without warranty, knowledge by the buyer of the danger of eviction amounted to the buyer’s purchasing at his peril and risk. According to the Court: “We think ... that our Article (2505) means the same as if it read:
+ 
+
+‘Unless the buyer was aware, at the time of the sale, of the danger of eviction, and thus or therefore purchased at his peril and risk.’ ” 34 La.Ann. 648, at 650.
+ 
+
+This Article codifies the result reached in New Orleans & Carrollton R.R. Co. v. Jourdain’s Heirs.
+ 
+
+(e) Under this Article, the seller’s liability for an eviction that is occasioned by his own act is based on contract. Such liability does not exclude quasi-delictual liability of the seller when his acts are of a tortious nature.
+ 
+
+(f) The last sentence incorporates a conclusion of Louisiana jurisprudence in Atlas Oil Co. v. Logan, 166 La. 28, 166 So. 582 (1928).
+ 
+
+Notes of Decisions (89)
+
+LSA-C.C. Art. 2503, LA C.C. Art. 2503
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2504
+Art. 2504. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2504, LA C.C. Art. 2504
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2505
+Art. 2505. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2505, LA C.C. Art. 2505
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2506
+Art. 2506. Rights of buyer against seller in case of eviction
+Currentness
+
+
+A buyer who avails himself of the warranty against eviction may recover from the seller the price he paid, the value of any fruits he had to return to the third person who evicted him, and also other damages sustained because of the eviction with the exception of any increase in value of the thing lost.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENTS--1993
+
+(a) This Article reproduces the substance of Article 2506 of the Louisiana Civil Code of 1870. It does not change the law.
+ 
+
+(b) Under this Article, in the absence of special agreement, attorney’s fees is not an item of damages recoverable by the evicted vendee. Guthrie v. Rudy Brown Builders, Inc., 416 So.2d 590 (La.App. 5th Cir.1982); Miller v. Patterson, 240 So.2d 22 (La.App. 2d Cir.1970).
+ 
+
+Notes of Decisions (270)
+
+LSA-C.C. Art. 2506, LA C.C. Art. 2506
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2507
+Art. 2507. Restitution of full price despite deterioration, deduction of damage when benefit to buyer
+Currentness
+
+
+A seller liable for eviction must return the full price to the buyer even if, at the time of the eviction, the value of the thing has been diminished due to any cause including the buyer’s neglect.
+ 
+
+Nevertheless, if the buyer has benefited from a diminution in value caused by his own act, the amount of his benefit must be deducted from the total owed to him by the seller because of the eviction.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENTS--1993
+
+(a) This Article combines the substance of Articles 2507 and 2508 of the Louisiana Civil Code of 1870. It changes the law insofar as it modifies the rule of Article 2508 of the Louisiana Civil Code of 1870 in order to make it compatible with the principle that a mere threat, rather than actual, eviction suffices to allow action by the buyer. See Art. 2500, supra.
+ 
+
+(b) Under this Article, when the buyer has benefited from a diminution in value of the thing because of his own act, as when he has sold a component part of the thing, the seller is allowed to withhold the value of that benefit from the price he must return to the buyer, even in the absence of an action brought by the true owner, because the seller is the one primarily exposed to such an action. A buyer who claims that he also is exposed to an action by the true owner may protect himself by bringing an action against the seller and making the true owner a third party in that suit, a procedure advisable to either party whenever a buyer considers himself evicted on the strength of a threat alone. See Bologna Bros. v. Stephens, 206 La. 112, 18 So.2d 914 (1944).
+ 
+
+Notes of Decisions (6)
+
+LSA-C.C. Art. 2507, LA C.C. Art. 2507
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2508
+Art. 2508. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2508, LA C.C. Art. 2508
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2509
+Art. 2509. Reimbursement to buyer for useful improvements, liability of seller in bad faith
+Currentness
+
+
+A seller liable for eviction must reimburse the buyer for the cost of useful improvements to the thing made by the buyer. If the seller knew at the time of the sale that the thing belonged to a third person, he must reimburse the buyer for the cost of all improvements.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENTS--1993
+
+(a) This Article combines the substance of Articles 2509 and 2510 of the Louisiana Civil Code of 1870; it does not change the law.
+ 
+
+(b) Ordinary repairs necessary to the enjoyment of the object sold cannot be classified as improvements. McKenzie v. Bacon, 41 La.Ann. 6, 5 So. 640 (1889).
+ 
+
+(c) The term “cost” has been substituted for the word “expenses” used in the source Article, since “cost” has a clearer and more technically precise meaning.
+ 
+
+(d) The rules of this Article also prevail when eviction results from an encumbrance, such as a nonapparent servitude. See Collins v. Slocum, 317 So.2d 672 (La.App. 3d Cir.1975).
+ 
+
+Notes of Decisions (27)
+
+LSA-C.C. Art. 2509, LA C.C. Art. 2509
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2510
+Art. 2510. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2510, LA C.C. Art. 2510
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2511
+Art. 2511. Partial eviction, rights of buyer
+Currentness
+
+
+When the buyer is evicted from only a part of the thing sold, he may obtain rescission of the sale if he would not have bought the thing without that part. If the sale is not rescinded, the buyer is entitled to a diminution of the price in the proportion that the value of the part lost bears to the value of the whole at the time of the sale.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENTS--1993
+
+(a) This Article combines the substance of Articles 2511 and 2514 of the Louisiana Civil Code of 1870. It does not change the law.
+ 
+
+(b) This Article contains an example of a situation of failure of cause. See Guglielmi v. Geismer, 47 La.Ann. 147, 16 So. 742 (1895). See also C.C. Art. 1966 (Rev.1984).
+ 
+
+(c) The amount of the buyer’s recovery in instances where he is evicted from a part of the thing purchased depends on the relative value of the part from which he is evicted. For instance, where for a lump price the buyer has bought immovable property, part of which is valuable road frontage land and part of which is relatively inexpensive swampland, the buyer is entitled to recover the relative value of the particular part from which he was evicted, regardless of the proportion that the evicted area bears to the total area of the immovable.
+ 
+
+Notes of Decisions (64)
+
+LSA-C.C. Art. 2511, LA C.C. Art. 2511
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2512
+Art. 2512. Warranty against eviction from proceeds
+Currentness
+
+
+The warranty against eviction extends also to those things that proceed from the thing sold.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENTS--1993
+
+(a) This Article reproduces the substance of Article 2512 of the Louisiana Civil Code of 1870. It does not change the law.
+ 
+
+(b) “Things that proceed from the thing sold” include “fruits” as defined by Civil Code Article 551 (Rev.1976) and “products” as defined by Civil Code Article 488 (Rev.1979).
+ 
+
+(c) For the damages recoverable under this Article, the rules contained in the preceding Articles--as explained in the pertinent comments--are applicable.
+ 
+
+Notes of Decisions (6)
+
+LSA-C.C. Art. 2512, LA C.C. Art. 2512
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2513
+Art. 2513. Scope of warranty in sale of succession rights
+Currentness
+
+
+In a sale of a right of succession, the warranty against eviction extends only to the right to succeed the decedent, which entitles the buyer to those things that are, in fact, a part of the estate, but it does not extend to any particular thing.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENT--1993
+
+This Article reproduces the substance of Article 2513 of the Louisiana Civil Code of 1870. It does not change the law.
+ 
+
+Notes of Decisions (12)
+
+LSA-C.C. Art. 2513, LA C.C. Art. 2513
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2514
+Arts. 2514 to 2516. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2514, LA C.C. Art. 2514
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2515
+Arts. 2514 to 2516. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2515, LA C.C. Art. 2515
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2516
+Arts. 2514 to 2516. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2516, LA C.C. Art. 2516
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2517
+Art. 2517. Call in warranty, failure of buyer to call seller in warranty, suit to quiet possession
+Currentness
+
+
+A buyer threatened with eviction must give timely notice of the threat to the seller. If a suit for eviction has been brought against the buyer, his calling in the seller to defend that suit amounts to such notice.
+ 
+
+A buyer who elects to bring suit against a third person who disturbs his peaceful possession of the thing sold must give timely notice of that suit to the seller.
+ 
+
+In either case, a buyer who fails to give such notice, or who fails to give it in time for the seller to defend himself, forfeits the warranty against eviction if the seller can show that, had he been notified in time, he would have been able to prove that the third person who sued the buyer had no right.
+ 
+
+Credits
+
+Acts 1993, No. 841, § 1, eff. Jan. 1, 1995.
+ 
+Editors’ Notes
+REVISION COMMENTS--1993
+
+(a) This Article combines the substance of Articles 2517-2519 of the Louisiana Civil Code of 1870. It does not change the law.
+ 
+
+(b) Under this article, the buyer who fails to notify the seller of the disturbance of his peaceful possession as provided in the article forfeits the warranty against eviction in all cases regardless of whether the buyer has actually been sued by the third person disturbing the buyer’s possession.
+ 
+
+Notes of Decisions (60)
+
+LSA-C.C. Art. 2517, LA C.C. Art. 2517
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2518
+Art. 2518. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2518, LA C.C. Art. 2518
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
+
+
+West’s Louisiana Statutes Annotated 
+Louisiana Civil Code (Refs & Annos)
+Book III. Of the Different Modes of Acquiring the Ownership of Things (Refs & Annos)
+Title VII. Sale (Refs & Annos)
+Chapter 8. Eviction
+LSA-C.C. Art. 2519
+Art. 2519. [Reserved]
+Currentness
+
+
+LSA-C.C. Art. 2519, LA C.C. Art. 2519
+Current through the 2018 Third Extraordinary Session.
+End of Document
+
+© 2019 Thomson Reuters. No claim to original U.S. Government Works.
+
+
