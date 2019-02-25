@@ -1,17 +1,17 @@
 Question,,,,,,,
-1. State Pre-Emption,pre-emption,preempt,,supersede,subsede,superseded,
-2. Number of Days after eviction notice that writ can be filed,writ,writ of restitution,summons,judgement,filed,within,days,after,restitution,writ of possession,,writs,outcome,ruling
-3. Regulations about property left at premise after eviction,storage,goods,distraint,lien,levy,levied,removal of goods,personal property,dispose,store
-4. Number of days between giving an eviction notice and filing,filing an eviction,court,eviction,notice,filing,after,days,notice,pay or quit,unpaid,due,nonpayment,terminate,file
-5. How long tenants must be late on rent before landlord can give eviction notice,late,notice,pay,quit,rent,term,repossess,pay or quit,nonpayment,unpaid,
-6. Jurisdiction where you can file an eviction case,file,jurisdiction,county,township,located,jurisdiction,eviction,court,file,case
+1. State Pre-Emption,pre-emption,preempt,,supersede,subsede,superseded,conflict,powers,enact,prohibited
+2. Number of Days after eviction notice that writ can be filed,writ,writ of restitution,judgement,filed,days,restitution,writ of possession,writs,outcome,ruling,possession,issue,issuing,shall issue
+3. Regulations about property left at premise after eviction,storage,goods,distraint,lien,levy,levied,removal of goods,personal property,dispose,store,reclaim,reclaimed,auction,property,abandoned,unclaimed,remain
+4. Number of days between giving an eviction notice and filing,filing an eviction,court,eviction,notice,filing,after,days,notice,unpaid,due,nonpayment,terminate,file,rent,possession,occupancy,late,payment,terminate,default,nonpayment of rent,nonpayment of rent,terminated,termination,arrears,notice
+5. Attorney required?,attorney,representative,file,eviction,case
+6. Jurisdiction where you can file an eviction case,file,jurisdiction,county,township,located,jurisdiction,eviction,court,file,case,district court,county court, competent jurisdiction
 7. Vouchers as a protected source of income,section 8,vouchers,voucher,voucher
-8. Fees you can tack on to an eviction judgment,fees,attorney,lawyer,costs,in favor,judgement,damages,attorney's,lawyer's,legal,
-9. How long landlords have to rectify a complaint about the property,complaint,repair,health,material,safety,remedies,condition,noncompliance,physical,property,remedied,danger,reasonable,
-10. Non-discrimination ordinances,discriminate,discriminatory,fair housing,refuse,deny,race,religion,preference,discrimination,discriminate,discriminate
-11. Rent Escrow/Withholding,escrow,withholding,rent,services,reasonable,noncompliance,deduct,cost,damages,withold,withold rent,withold payment
-12. Payment of rent between judgement and filing of writ,redemption,right to redemption,payment,in full,past due,tender,accrue,
+8. Fees you can tack on to an eviction judgment,fees,attorney,lawyer,costs,in favor,judgement,damages,attorney's,lawyer's,legal,attorney's fees,reasonable,fee,damages
+9. How long landlords have to rectify a complaint about the property,complaint,repair,health,material,safety,remedies,condition,noncompliance,physical,property,remedied,danger,reasonable,deduct,conditions
+10. Non-discrimination ordinances,discriminate,discriminatory,fair housing,refuse,deny,race,religion,preference,discrimination,discriminate,on the basis of
+11. Rent Escrow/Withholding,escrow,withholding,rent,services,reasonable,noncompliance,landlord,deduct,cost,damages,withold,withold rent,withold payment,damages
+12. Payment of rent between judgement and filing of writ,redemption,right to redemption,payment,in full,past due,tender,accrue,judgement,filing,stay the judgement,appeal,file,bond,stay of execution
 13. Garnishment,wages,garnish,attach,garnishment,judgement,wage,payable,salary,deduct
-14. Notice to Evict,Pay or vacate,pay or quit,notice to quit,serve,serving,sheriff,notice,provide notice,written,written notice,deliver,receipt,
-15. Serving summons,summons,sheriff,deliver,serve,witness,constable,notify,mail,
-16. Possession vs judgement,judgement,back rent,possession,
+14. Notice to Evict,Pay or vacate,pay or quit,notice to quit,serve,serving,sheriff,notice,provide notice,written,written notice,deliver,receipt,post,posting
+15. Serving summons,summons,sheriff,deliver,serve,witness,constable,notify,mail,summons,copy
+16. Possession vs judgement,judgement,back rent,possession,action,relief,jurisdiction,damages
