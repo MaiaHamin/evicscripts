@@ -137,7 +137,7 @@ def sheetfill(qstates):
             ranked = rankmatches(keywords, count_dict, line_count, matches, 5)
             if len(ranked) > 0:
                 outr = ranked[0][0]
-                outm = matches[ranked[0][0]]
+                outm = ranked[0][1]
             else:
                 outr = ""
                 outm = ""
@@ -146,7 +146,7 @@ def sheetfill(qstates):
             outsheet.write(startrow + 1, startcol, outm)
             startcol += 4
         startrow += 1
-    outxl.save('Generated.xls')
+        outxl.save(state + '/Generated.xls')
 
 
 def questionanswer(state, qnum):
