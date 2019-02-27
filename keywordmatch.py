@@ -59,8 +59,8 @@ def getmatches(keywords, lawfilenames, pref):
     count_dict = {}
     split_keys = []
     matches = {}
-    print(lawfilenames)
-    print(pref)
+    #print(lawfilenames)
+    #print(pref)
     for lawfile in lawfilenames:
         with open (lawfile, 'r') as f:
             line_count = 0
@@ -97,7 +97,7 @@ def getmatches(keywords, lawfilenames, pref):
 def rankmatches(keywords, count_dict, line_count, matches, top_n):
     wrst_bst_keys = []
     for (sec, fulltext) in matches.items():
-        for text in fulltext.split("\n"):
+        for text in fulltext.split("."):
             num_matches = 0.
             length = float(len(text))
             if (length > 15):
@@ -105,8 +105,8 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n):
                     count = text.count(word)
                     if (count != 0):
                         num_matches += (float(count) * float(len(word))/ np.log(length)) * np.log (line_count / count_dict[word])
-                wrst_bst_keys.append((sec, text, num_matches))
-                wrst_bst_keys.sort(key=lambda k: k[2], reverse=True)
+                wrst_bst_keys.append((num_matches, sec.replace("\n", " "), text, fulltext))
+                wrst_bst_keys.sort(key=lambda k: k[0], reverse=True)
                 wrst_bst_keys = wrst_bst_keys[:min(len(wrst_bst_keys), top_n)]
 
     return wrst_bst_keys
@@ -136,8 +136,8 @@ def sheetfill(qstates):
             matches, count_dict, line_count = getmatches(keywords, lawfilenames, prefix)
             ranked = rankmatches(keywords, count_dict, line_count, matches, 5)
             if len(ranked) > 0:
-                outr = ranked[0][0]
-                outm = ranked[0][1]
+                outr = ranked[0][1]
+                outm = ranked[0][3]
             else:
                 outr = ""
                 outm = ""
@@ -149,7 +149,7 @@ def sheetfill(qstates):
         outxl.save(state + '/Generated.xls')
 
 
-def questionanswer(state, qnum):
+def questionanswer(state, qnum, nmatches):
     state_ind = states.index(state)
     laws = allfilenames[state_ind]
     lawfilenames = []
@@ -157,20 +157,59 @@ def questionanswer(state, qnum):
         lawfilenames.append("./" + state + "/" + law)
     prefix = prefixes[state_ind]
     keyword_dict = get_keywords([int(qnum)])
-    print(keyword_dict)
+    print("Using keywords: ")
     keywords = keyword_dict[int(qnum)]
     print(keywords)
     matches, count_dict, line_count = getmatches(keywords, lawfilenames, prefix)
-    ranked = rankmatches(keywords, count_dict, line_count, matches, 3)
+    ranked = rankmatches(keywords, count_dict, line_count, matches, nmatches)
     for match in ranked:
-        print(str(match[0]) + ": " + str(match[2]))
-        print(match[1])
+        print(str(match[1]) + " (with score " + str(match[0]) + ")")
+        outstr = match[3].replace(match[2], " ||| " + match[2] + " ||| ")
+        print(outstr)
 
         print("- - - - - - - - - - - - - -")
 
 
 if __name__ == "__main__":
-    if sys.argv[2] == "all":
-        sheetfill(sys.argv[1])
+    if len(sys.argv) == 1:
+        invalidq = True
+        while invalidq:
+            mode = input("Enter question number (type 'all' for spreadsheet fill).")
+            if mode == "all":
+                sheetfill(state)
+                invalidq = False
+            else:
+                try:
+                    mode = int(mode)
+                    if mode < 16 and mode > 0:
+                        invalidq = False
+                    else:
+                        print("Sorry, that's not a valid question number")
+                except e:
+                    print("Sorry, that's not a valid question number")
+
+                invalidState = True
+                while invalidState:
+                    state = input("Enter the two-letter state abbreviation.")
+                    if state in states:
+                        invalidState = False
+                    else:
+                        print("Sorry, we don't have that state's files available yet.")
+
+
+                invalidq = True
+                while invalidq:
+                    nmatches = input("How many matches do you want to view?")
+                    try:
+                        nmatches = int(nmatches)
+                        if mode < 10 and mode > 0:
+                            invalidq = False
+                        else:
+                            print("Sorry, that's not a valid number of matches.")
+                    except e:
+                        print("Sorry, that's not a valid number of matches.")
+
+                questionanswer(state, mode, nmatches)
+
     else:
-        questionanswer(sys.argv[1], sys.argv[2])
+        questionanswer(sys.argv[1], sys.argv[2], 3)
