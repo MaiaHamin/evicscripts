@@ -8,6 +8,7 @@ stop_words = set(stopwords.words('english'))
 import numpy as np
 import sys
 import xlwt
+from collections import Counter
 
 # Add new states
 states = ["AL", "FL", "LA", "MD", "ME", "NV", "SC", "TX"]
@@ -68,6 +69,7 @@ def getmatches(keywords, lawfilenames, pref):
             line_count = 0
             last_sec = ""
             for line in f:
+                line = line.lower()
                 addto = False
                 line_count += 1
                 #print("linebeg: " + line[0:len(pref)])
@@ -80,9 +82,13 @@ def getmatches(keywords, lawfilenames, pref):
                 if line[0] == "(":
                     sec += " " + line[1]
                     text = line[4:]
+                wds = []
+                for word in line.split():
+                    lemword = lmtzr.lemmatize(word)
+                    wds.append(lemword)
+                counted = Counter(wds)
                 for word in keywords.keys():
-                    count = line.count(word)
-                    if count != 0:
+                    if word in counted:
                         addto = True
                         if word in count_dict:
                             count_dict[word] += 1
@@ -105,7 +111,7 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n):
             if (length > 15):
                 for word in keywords.keys():
                     count = text.count(word)
-                    if (count != 0):
+                    if (count != 0) and word in count_dict:
                         num_matches += float(keywords[word]) * (float(count) * float(len(word))/ np.log(length)) * np.log (line_count / count_dict[word])
                 wrst_bst_keys.append((num_matches, sec.replace("\n", " "), text, fulltext))
                 wrst_bst_keys.sort(key=lambda k: k[0], reverse=True)

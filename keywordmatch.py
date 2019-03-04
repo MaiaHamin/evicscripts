@@ -202,7 +202,7 @@ if __name__ == "__main__":
                     nmatches = input("How many matches do you want to view?")
                     try:
                         nmatches = int(nmatches)
-                        if mode < 10 and mode > 0:
+                        if nmatches < 10 and nmatches > 0:
                             invalidq = False
                         else:
                             print("Sorry, that's not a valid number of matches.")

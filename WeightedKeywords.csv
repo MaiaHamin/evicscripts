@@ -1,11 +1,11 @@
 Question*1.0,*1.0,*1.0,*1.0,*1.0,*1.0,*1.0,
-1. State Pre-Emption*1.0,pre-emption*1.0,preempt*1.0,*1.0,supersede*1.0,subsede*1.0,superseded*1.0,conflict*1.0,powers*1.0,enact*1.0,prohibited
+1. State Pre-Emption*1.0,pre-emption*1.0,preempt*1.0,*1.0,supersede*1.0,subsede*1.0,superseded*1.0,conflict*8.0,powers*8.0,enact*4.0,prohibited*0.2
 2. Number of Days after eviction notice that writ can be filed*1.0,writ*1.0,writ of restitution*1.0,judgement*1.0,filed*1.0,days*1.0,restitution*1.0,writ of possession*1.0,writs*1.0,outcome*1.0,ruling*1.0,possession*1.0,issue*1.0,issuing*1.0,shall issue
 3. Regulations about property left at premise after eviction*1.0,storage*1.0,goods*1.0,distraint*1.0,lien*1.0,levy*1.0,levied*1.0,removal of goods*1.0,personal property*1.0,dispose*1.0,store*1.0,reclaim*1.0,reclaimed*1.0,auction*1.0,property*1.0,abandoned*1.0,unclaimed*1.0,remain
 4. Number of days between giving an eviction notice and filing*1.0,filing an eviction*1.0,court*1.0,eviction*1.0,notice*1.0,filing*1.0,after*1.0,days*1.0,notice*1.0,unpaid*1.0,due*1.0,nonpayment*1.0,terminate*1.0,file*1.0,rent*1.0,possession*1.0,occupancy*1.0,late*1.0,payment*1.0,terminate*1.0,default*1.0,nonpayment of rent*1.0,nonpayment of rent*1.0,terminated*1.0,termination*1.0,arrears*1.0,notice
 5. Attorney required?*1.0,attorney*1.0,representative*1.0,file*1.0,eviction*1.0,case
-6. Jurisdiction where you can file an eviction case*1.0,file*1.0,jurisdiction*1.0,county*1.0,township*1.0,located*1.0,jurisdiction*1.0,eviction*1.0,court*1.0,file*1.0,case*1.0,district court*1.0,county court*1.0, competent jurisdiction
-7. Vouchers as a protected source of income*1.0,section 8*1.0,vouchers*1.0,voucher*1.0,voucher
+6. Jurisdiction where you can file an eviction case*1.0,file*1.0,jurisdiction*1.0,county*2.0,township*1.0,located*1.0,jurisdiction*1.0,eviction*1.0,court*1.0,file*1.0,case*1.0,district court*1.0,county court*1.0,where property is located*1.0,where property lies*1.0
+7. Vouchers as a protected source of income*1.0,section 8*1.0,vouchers*1.0,voucher*1.0,voucher,eviction*1.0,discrimination*1.0,protected*1.0
 8. Fees you can tack on to an eviction judgment*1.0,fees*1.0,attorney*1.0,lawyer*1.0,costs*1.0,in favor*1.0,judgement*1.0,damages*1.0,attorney's*1.0,lawyer's*1.0,legal*1.0,attorney's fees*1.0,reasonable*1.0,fee*1.0,damages
 9. How long landlords have to rectify a complaint about the property*1.0,complaint*1.0,repair*1.0,health*1.0,material*1.0,safety*1.0,remedies*1.0,condition*1.0,noncompliance*1.0,physical*1.0,property*1.0,remedied*1.0,danger*1.0,reasonable*1.0,deduct*1.0,conditions
 10. Non-discrimination ordinances*1.0,discriminate*1.0,discriminatory*1.0,fair housing*1.0,refuse*1.0,deny*1.0,race*1.0,religion*1.0,preference*1.0,discrimination*1.0,discriminate*1.0,on the basis of
