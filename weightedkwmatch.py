@@ -1,8 +1,9 @@
 import csv
 import nltk
 import re
-from nltk.stem.wordnet import WordNetLemmatizer
-lmtzr = WordNetLemmatizer()
+from nltk.stem import PorterStemmer
+from nltk.tokenize import sent_tokenize, word_tokenize
+ps = PorterStemmer()
 from nltk.corpus import stopwords
 stop_words = set(stopwords.words('english'))
 import numpy as np
@@ -38,7 +39,7 @@ outsheet = outxl.add_sheet('compared')
 def w_tokenize(s):
     return nltk.word_tokenize(s)
 
-def get_keywords(questions):
+def get_keywords(questions, use_stem):
     keyword_dict = {}
     with open('WeightedKeywords.csv', "rt") as csvfile:
         reader = csv.reader(csvfile)
@@ -51,14 +52,19 @@ def get_keywords(questions):
                     if (k != ""):
                         temp = k.split("*")
                         if len(temp) > 1:
-                            keywords[temp[0]] = temp[1]
+                            kw = temp[0]
+                            if use_stem:
+                                kw = ps.stem(kw)
+                            keywords[kw] = temp[1]
                 keyword_dict[count] = keywords
             count += 1
+    print(keyword_dict)
     return keyword_dict
 
 
 
-def getmatches(keywords, lawfilenames, pref):
+
+def getmatches(keywords, lawfilenames, pref, use_stem):
     count_dict = {}
     split_keys = []
     matches = {}
@@ -69,25 +75,27 @@ def getmatches(keywords, lawfilenames, pref):
             line_count = 0
             last_sec = ""
             for line in f:
-                line = line.lower()
-                addto = False
                 line_count += 1
                 #print("linebeg: " + line[0:len(pref)])
                 if line[0:len(pref)] == pref:
                     #print("lineend " + line[len(pref)])
                     last_sec = line[len(pref):]
-                seen_words = []
-                text = line
+                low_line = line.lower()
                 sec = last_sec
                 if line[0] == "(":
                     sec += " " + line[1]
-                    text = line[4:]
+                    line = line[4:]
+                if (len(line) > 1 and line[1] == "."):
+                    sec += " " + line[0]
+                    line = line[4:]
                 wds = []
-                for word in line.split():
-                    lemword = lmtzr.lemmatize(word)
-                    wds.append(lemword)
+                for word in low_line.split():
+                    if use_stem:
+                        word = ps.stem(word)
+                    wds.append(word.lower())
                 counted = Counter(wds)
-                for word in keywords.keys():
+                addto = False
+                for word in keywords:
                     if word in counted:
                         addto = True
                         if word in count_dict:
@@ -96,26 +104,36 @@ def getmatches(keywords, lawfilenames, pref):
                             count_dict[word] = 1
                 if addto:
                     if sec in matches:
-                        matches[sec] += "\n" + text
+                        matches[sec] += "\n" + line
                     else:
-                        matches[sec] = text
+                        matches[sec] = line
 
     return matches, count_dict, line_count
 
-def rankmatches(keywords, count_dict, line_count, matches, top_n):
+def rankmatches(keywords, count_dict, line_count, matches, top_n, use_stem):
     wrst_bst_keys = []
     for (sec, fulltext) in matches.items():
-        for text in fulltext.split("."):
+        bestscore = 0
+        bestsent = ""
+        for sent in fulltext.split("."):
+            if use_stem:
+                #words = sent.split()
+                #for i in range(len(words)):
+                sent = ps.stem(words[i])
+                #words = " ".join(words)
             num_matches = 0.
-            length = float(len(text))
+            length = float(len(sent))
             if (length > 15):
                 for word in keywords.keys():
-                    count = text.count(word)
+                    count = sent.count(word)
                     if (count != 0) and word in count_dict:
                         num_matches += float(keywords[word]) * (float(count) * float(len(word))/ np.log(length)) * np.log (line_count / count_dict[word])
-                wrst_bst_keys.append((num_matches, sec.replace("\n", " "), text, fulltext))
-                wrst_bst_keys.sort(key=lambda k: k[0], reverse=True)
-                wrst_bst_keys = wrst_bst_keys[:min(len(wrst_bst_keys), top_n)]
+            if num_matches > bestscore:
+                bestsent = sent
+                bestscore = num_matches
+        wrst_bst_keys.append((bestscore, sec.replace("\n", " "), bestsent, fulltext))
+        wrst_bst_keys.sort(key=lambda k: k[0], reverse=True)
+        wrst_bst_keys = wrst_bst_keys[:min(len(wrst_bst_keys), top_n)]
 
     return wrst_bst_keys
 
@@ -158,18 +176,19 @@ def sheetfill(qstates):
 
 
 def questionanswer(state, qnum, nmatches):
+    use_stem = False
     state_ind = states.index(state)
     laws = allfilenames[state_ind]
     lawfilenames = []
     for law in laws:
         lawfilenames.append("./" + state + "/" + law)
     prefix = prefixes[state_ind]
-    keyword_dict = get_keywords([int(qnum)])
+    keyword_dict = get_keywords([int(qnum)], use_stem)
     print("Using keywords: ")
     keywords = keyword_dict[int(qnum)]
     print(keywords.keys())
-    matches, count_dict, line_count = getmatches(keywords, lawfilenames, prefix)
-    ranked = rankmatches(keywords, count_dict, line_count, matches, nmatches)
+    matches, count_dict, line_count = getmatches(keywords, lawfilenames, prefix, use_stem)
+    ranked = rankmatches(keywords, count_dict, line_count, matches, nmatches, use_stem)
     for match in ranked:
         print(str(match[1]) + " (with score " + str(match[0]) + ")")
         outstr = match[3].replace(match[2], " ||| " + match[2] + " ||| ")
@@ -210,7 +229,7 @@ if __name__ == "__main__":
                     nmatches = input("How many matches do you want to view?")
                     try:
                         nmatches = int(nmatches)
-                        if mode < 10 and mode > 0:
+                        if nmatches < 10 and nmatches > 0:
                             invalidq = False
                         else:
                             print("Sorry, that's not a valid number of matches.")
