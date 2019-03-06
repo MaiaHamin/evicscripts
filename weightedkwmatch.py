@@ -5,6 +5,7 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import sent_tokenize, word_tokenize
 ps = PorterStemmer()
 from nltk.corpus import stopwords
+from nltk.tokenize import sent_tokenize, word_tokenize
 stop_words = set(stopwords.words('english'))
 import numpy as np
 import sys
@@ -54,7 +55,15 @@ def get_keywords(questions, use_stem):
                         if len(temp) > 1:
                             kw = temp[0]
                             if use_stem:
-                                kw = ps.stem(kw)
+                                out = ""
+                                kwlist = kw.split()
+                                for k in kwlist:
+                                    if len(k) > 2:
+                                        ks = ps.stem(k)
+                                    else:
+                                        ks = k
+                                    out += ks + " "
+                                kw = out[:-1]
                             keywords[kw] = temp[1]
                 keyword_dict[count] = keywords
             count += 1
@@ -80,7 +89,6 @@ def getmatches(keywords, lawfilenames, pref, use_stem):
                 if line[0:len(pref)] == pref:
                     #print("lineend " + line[len(pref)])
                     last_sec = line[len(pref):]
-                low_line = line.lower()
                 sec = last_sec
                 if line[0] == "(":
                     sec += " " + line[1]
@@ -88,11 +96,13 @@ def getmatches(keywords, lawfilenames, pref, use_stem):
                 if (len(line) > 1 and line[1] == "."):
                     sec += " " + line[0]
                     line = line[4:]
-                wds = []
-                for word in low_line.split():
-                    if use_stem:
-                        word = ps.stem(word)
-                    wds.append(word.lower())
+                low_line = line.lower()
+                if use_stem:
+                    wds = []
+                    for word in low_line.split():
+                        if len(word) > 3:
+                            word = ps.stem(word)
+                        wds.append(word.lower())
                 counted = Counter(wds)
                 addto = False
                 for word in keywords:
@@ -107,7 +117,6 @@ def getmatches(keywords, lawfilenames, pref, use_stem):
                         matches[sec] += "\n" + line
                     else:
                         matches[sec] = line
-
     return matches, count_dict, line_count
 
 def rankmatches(keywords, count_dict, line_count, matches, top_n, use_stem):
@@ -116,16 +125,19 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n, use_stem):
         bestscore = 0
         bestsent = ""
         for sent in fulltext.split("."):
-            if use_stem:
-                #words = sent.split()
-                #for i in range(len(words)):
-                sent = ps.stem(words[i])
-                #words = " ".join(words)
             num_matches = 0.
             length = float(len(sent))
+            stemline = sent
+            if use_stem:
+                wds = []
+                for word in sent.split():
+                    if len(word) > 3:
+                        word = ps.stem(word)
+                    wds.append(word.lower())
+            stemline = " ".join(wds)
             if (length > 15):
                 for word in keywords.keys():
-                    count = sent.count(word)
+                    count = stemline.count(word)
                     if (count != 0) and word in count_dict:
                         num_matches += float(keywords[word]) * (float(count) * float(len(word))/ np.log(length)) * np.log (line_count / count_dict[word])
             if num_matches > bestscore:
@@ -138,6 +150,7 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n, use_stem):
     return wrst_bst_keys
 
 def sheetfill(qstates):
+    use_stem = True
     questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
     startrow = 0
     if not isinstance(qstates, list):
@@ -152,15 +165,14 @@ def sheetfill(qstates):
         prefix = prefixes[state_ind]
         print(prefix)
         print(lawfilenames)
-        print(prefix)
 
-        keyword_dict = get_keywords(questions)
+        keyword_dict = get_keywords(questions, use_stem)
 
         for q in questions:
             keywords = keyword_dict[q]
             print(keywords)
-            matches, count_dict, line_count = getmatches(keywords, lawfilenames, prefix)
-            ranked = rankmatches(keywords, count_dict, line_count, matches, 5)
+            matches, count_dict, line_count = getmatches(keywords, lawfilenames, prefix, use_stem)
+            ranked = rankmatches(keywords, count_dict, line_count, matches, 1, use_stem)
             if len(ranked) > 0:
                 outr = ranked[0][1]
                 outm = ranked[0][3]
@@ -176,7 +188,7 @@ def sheetfill(qstates):
 
 
 def questionanswer(state, qnum, nmatches):
-    use_stem = False
+    use_stem = True
     state_ind = states.index(state)
     laws = allfilenames[state_ind]
     lawfilenames = []
@@ -199,6 +211,13 @@ def questionanswer(state, qnum, nmatches):
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
+        invalidState = True
+        while invalidState:
+            state = input("Enter the two-letter state abbreviation.")
+            if state in states:
+                invalidState = False
+            else:
+                print("Sorry, we don't have that state's files available yet.")
         invalidq = True
         while invalidq:
             mode = input("Enter question number (type 'all' for spreadsheet fill).")
@@ -214,14 +233,6 @@ if __name__ == "__main__":
                         print("Sorry, that's not a valid question number")
                 except e:
                     print("Sorry, that's not a valid question number")
-
-                invalidState = True
-                while invalidState:
-                    state = input("Enter the two-letter state abbreviation.")
-                    if state in states:
-                        invalidState = False
-                    else:
-                        print("Sorry, we don't have that state's files available yet.")
 
 
                 invalidq = True
