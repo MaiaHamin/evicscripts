@@ -196,42 +196,38 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n):
 
     return wrst_bst_keys
 
-def sheetfill(qstates):
+def sheetfill(state):
     questions = [i for i in range(1, 17)]
     startrow = 0
-    if not isinstance(qstates, list):
-        qstates = [qstates]
-    for state in qstates:
-        startcol = 3
-        state_files = getonestatesfiles(state)
-        state_ind = states.index(state)
-        prefix = prefixes[state_ind]
+    startcol = 3
+    state_files = getonestatesfiles(state)
+    state_ind = states.index(state)
+    prefix = prefixes[state_ind]
 
-        keyword_dict = get_keywords(questions)
+    keyword_dict = get_keywords(questions)
 
-        for q in questions:
-            keywords = keyword_dict[q]
-            matches, count_dict, line_count = getmatches(keywords, state_files, prefix)
-            ranked = rankmatches(keywords, count_dict, line_count, matches, 1)
-            if len(ranked) > 0:
-                outr = ranked[0][1]
-                outm = ranked[0][3]
-            else:
-                outr = ""
-                outm = ""
-            outsheet.write(startrow + 1, startcol, outr)
-            startcol += 1
-            outsheet.write(startrow + 1, startcol, outm)
-            startcol += 4
-        startrow += 1
-        outxl.save(state + '/Generated.xls')
+    for q in questions:
+        keywords = keyword_dict[q]
+        matches, count_dict, line_count = getmatches(keywords, state_files, prefix)
+        ranked = rankmatches(keywords, count_dict, line_count, matches, 1)
+        if len(ranked) > 0:
+            outr = ranked[0][1]
+            outm = ranked[0][3]
+        else:
+            outr = ""
+            outm = ""
+        outsheet.write(startrow + 1, startcol, outr)
+        startcol += 1
+        outsheet.write(startrow + 1, startcol, outm)
+        startcol += 4
+    startrow += 1
+    outxl.save(os.path.join(os.getcwd(), "..", "Spreadsheets", state + ".xls"))
 
 
 def questionanswer(state, qnum, nmatches):
     state_files = getonestatesfiles(state)
     state_ind = states.index(state)
     prefix = prefixes[state_ind]
-
     keyword_dict = get_keywords([int(qnum)])
     print("Using keywords: ")
     keywords = keyword_dict[int(qnum)]
@@ -266,14 +262,16 @@ if __name__ == "__main__":
         "Invalid question number.",
         lambda x : (int(x), False) if (int(x) >= 0 and int(x) <= 16) else (None, True))
 
-        nmatches = validanswer("Number of matches:",
-        "Invalid number of matches.",
-        lambda x : (int(x), False) if (int(x) >= 0 and int(x) <= 10) else (None, True))
-
         if question == 0:
             sheetfill(state)
+
         else:
+            nmatches = validanswer("Number of matches:",
+            "Invalid number of matches.",
+            lambda x : (int(x), False) if (int(x) >= 0 and int(x) <= 10) else (None, True))
+
             questionanswer(state, question, nmatches)
+
 
     else:
         questionanswer(sys.argv[1], sys.argv[2], 3)
