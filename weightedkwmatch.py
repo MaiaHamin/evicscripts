@@ -21,6 +21,8 @@ states = ["AK", "AL", "AR", "AZ", "CA", "CO", "DC", "DE", "FL", "IA", "ID", "IL"
 "KS", "LA", "MA", "MD", "ME", "MI", "MO", "MS", "MT", "ND", "NJ", "NM", "NV", "NY", "OH",
 "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "VT", "WA", "WI", "WV", "WY"]
 
+use_stem = True
+
 outxl = xlwt.Workbook()
 outsheet = outxl.add_sheet('compared')
 
@@ -77,18 +79,20 @@ def getallstatesfiles():
 
 def getonestatesfiles(s):
     state_files = []
-    if os.path.isdir(os.path.join(os.getcwd(), "Text", s)):
-        for filename in os.listdir(os.path.join(os.getcwd(), "Text", s)):
+    print(os.path.join(os.getcwd(), "..", "Text", s))
+    if os.path.isdir(os.path.join(os.getcwd(), "..", "Text", s)):
+        for filename in os.listdir(os.path.join(os.getcwd(), "..", "Text", s)):
             if filename.endswith(".txt"):
-                state_files.append(os.path.join(os.getcwd(), "Text", s, filename))
+                state_files.append(os.path.join(os.getcwd(), "..", "Text", s, filename))
     if len(state_files) == 0:
-        print("No files found for " + s + ".")
+        print("WARNING:")
+    print(str(len(state_files)) + " files found for " + s + ".")
     return state_files
 
 def w_tokenize(s):
     return nltk.word_tokenize(s)
 
-def get_keywords(questions, use_stem):
+def get_keywords(questions):
     keyword_dict = {}
     with open('WeightedKeywords.csv', "rt") as csvfile:
         reader = csv.reader(csvfile)
@@ -116,27 +120,21 @@ def get_keywords(questions, use_stem):
                 keyword_dict[count] = keywords
             count += 1
     if len(keyword_dict) == 0:
-        print("No keywords found.")
+        print("WARNING: No keywords found.")
     return keyword_dict
 
-
-
-
-def getmatches(keywords, lawfilenames, pref, use_stem):
+def getmatches(keywords, lawfilenames, pref):
     count_dict = {}
     split_keys = []
     matches = {}
-    #print(lawfilenames)
-    #print(pref)
+    line_count = 0
     for lawfile in lawfilenames:
         with open (lawfile, 'r') as f:
             line_count = 0
             last_sec = ""
             for line in f:
                 line_count += 1
-                #print("linebeg: " + line[0:len(pref)])
                 if line[0:len(pref)] == pref:
-                    #print("lineend " + line[len(pref)])
                     last_sec = line[len(pref):]
                 sec = last_sec
                 if line[0] == "(":
@@ -168,7 +166,7 @@ def getmatches(keywords, lawfilenames, pref, use_stem):
                         matches[sec] = line
     return matches, count_dict, line_count
 
-def rankmatches(keywords, count_dict, line_count, matches, top_n, use_stem):
+def rankmatches(keywords, count_dict, line_count, matches, top_n):
     wrst_bst_keys = []
     for (sec, fulltext) in matches.items():
         bestscore = 0
@@ -199,8 +197,7 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n, use_stem):
     return wrst_bst_keys
 
 def sheetfill(qstates):
-    use_stem = True
-    questions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    questions = [i for i in range(1, 17)]
     startrow = 0
     if not isinstance(qstates, list):
         qstates = [qstates]
@@ -210,16 +207,12 @@ def sheetfill(qstates):
         state_ind = states.index(state)
         prefix = prefixes[state_ind]
 
-        print(prefix)
-        print(state_files)
-
-        keyword_dict = get_keywords(questions, use_stem)
+        keyword_dict = get_keywords(questions)
 
         for q in questions:
             keywords = keyword_dict[q]
-            print(keywords)
-            matches, count_dict, line_count = getmatches(keywords, state_files, prefix, use_stem)
-            ranked = rankmatches(keywords, count_dict, line_count, matches, 1, use_stem)
+            matches, count_dict, line_count = getmatches(keywords, state_files, prefix)
+            ranked = rankmatches(keywords, count_dict, line_count, matches, 1)
             if len(ranked) > 0:
                 outr = ranked[0][1]
                 outm = ranked[0][3]
@@ -235,19 +228,16 @@ def sheetfill(qstates):
 
 
 def questionanswer(state, qnum, nmatches):
-    use_stem = True
     state_files = getonestatesfiles(state)
     state_ind = states.index(state)
     prefix = prefixes[state_ind]
 
-    print(prefix)
-    print(state_files)
-    keyword_dict = get_keywords([int(qnum)], use_stem)
+    keyword_dict = get_keywords([int(qnum)])
     print("Using keywords: ")
     keywords = keyword_dict[int(qnum)]
     print(keywords.keys())
-    matches, count_dict, line_count = getmatches(keywords, state_files, prefix, use_stem)
-    ranked = rankmatches(keywords, count_dict, line_count, matches, nmatches, use_stem)
+    matches, count_dict, line_count = getmatches(keywords, state_files, prefix)
+    ranked = rankmatches(keywords, count_dict, line_count, matches, nmatches)
     for match in ranked:
         print(str(match[1]) + " (with score " + str(match[0]) + ")")
         outstr = match[3].replace(match[2], " ||| " + match[2] + " ||| ")
@@ -280,7 +270,10 @@ if __name__ == "__main__":
         "Invalid number of matches.",
         lambda x : (int(x), False) if (int(x) >= 0 and int(x) <= 10) else (None, True))
 
-        questionanswer(state, question, nmatches)
+        if question == 0:
+            sheetfill(state)
+        else:
+            questionanswer(state, question, nmatches)
 
     else:
         questionanswer(sys.argv[1], sys.argv[2], 3)
