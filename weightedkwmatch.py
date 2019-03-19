@@ -1,6 +1,9 @@
+#-*- encoding: utf-8 -*-
+
 import csv
 import nltk
 import re
+import os
 from nltk.stem import PorterStemmer
 from nltk.tokenize import sent_tokenize, word_tokenize
 ps = PorterStemmer()
@@ -12,30 +15,75 @@ import sys
 import xlwt
 from collections import Counter
 
+
 # Add new states
-states = ["AL", "FL", "LA", "MD", "ME", "NV", "SC", "TX"]
-# data from Jon Mayer?
-allfilenames = [
-["AlabamaProperty.txt", "AlabamaPropertyA.txt"],
-["FLLaws.txt", "FLLaws2.txt", "FLResTen.txt", "FLEject.txt", "FL3.txt"],
-["LAEvicting.txt", "LASaleEviction.txt"],
-["MarylandLandlordsTenants.txt"],
-["Rental.txt", "EntryandDetainer.txt"],
-["NVLaws.txt", "NVLaws2.txt"],
-["SCEjectment.txt", "SCLandlordTenGen.txt", "SCResLandlordTen.txt", "SCLeaseholdEstates.txt"],
-["TexasProperty.txt", "TexasTwo.txt"]]
-prefixes = [
-"Ala.Code 1975 §",
-"West’s F.S.A. §",
-"LSA-C.C.P.",
-"MD Code, Real Property, §",
-"14 M.R.S.A. §",
-"N.R.S.",
-"Code 1976 §",
-"V.T.C.A., Property Code §"]
+states = ["AK", "AL", "AR", "AZ", "CA", "CO", "DC", "DE", "FL", "IA", "ID", "IL", "IN",
+"KS", "LA", "MA", "MD", "ME", "MI", "MO", "MS", "MT", "ND", "NJ", "NM", "NV", "NY", "OH",
+"OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "VT", "WA", "WI", "WV", "WY"]
 
 outxl = xlwt.Workbook()
 outsheet = outxl.add_sheet('compared')
+
+prefixes = [
+"AS §",
+"Ala.Code 1975 §",
+"A.C.A. §",
+"A.R.S. §",
+"West's Ann.Cal.Civ.Code §",
+"C.R.S.A. §",
+"DC ST §",
+"25 Del.C. §",
+"West’s F.S.A. §",
+"I.C.A. §",
+"I.C. §",
+"765 ILCS",
+"IC",
+"K.S.A.",
+"LSA-C.C.P.",
+"M.G.L.A. 183 §",
+"MD Code, Real Property, §",
+"14 M.R.S.A. §",
+"M.C.L.A.",
+"V.A.M.S.",
+"Miss. Code Ann. §",
+"MCA",
+"NDCC",
+"N.J.S.A.",
+"N. M. S. A. 1978, §",
+"N.R.S.",
+"McKinney's Real Property Law §",
+"R.C. §",
+"60 Okl.St.Ann. §",
+"O.R.S. §",
+"68 P.S. §",
+"Gen.Laws 1956, §",
+"Code 1976 §",
+"SDCL §",
+"T. C. A. §",
+"V.T.C.A., Property Code §",
+"27 V.S.A. §",
+"West's RCWA",
+"W.S.A.",
+"W. Va. Code, §",
+"W.S.1977 §"
+]
+# filepath? /Volumes/eviction/Intern Dropbox/Landlord_Tenant_Project/Text/
+def getallstatesfiles():
+    all_files = []
+    for s in states:
+        state_files = getonestatesfiles(s)
+        all_files.append(state_files)
+    return allfilenames
+
+def getonestatesfiles(s):
+    state_files = []
+    if os.path.isdir(os.path.join(os.getcwd(), "Text", s)):
+        for filename in os.listdir(os.path.join(os.getcwd(), "Text", s)):
+            if filename.endswith(".txt"):
+                state_files.append(os.path.join(os.getcwd(), "Text", s, filename))
+    if len(state_files) == 0:
+        print("No files found for " + s + ".")
+    return state_files
 
 def w_tokenize(s):
     return nltk.word_tokenize(s)
@@ -67,7 +115,8 @@ def get_keywords(questions, use_stem):
                             keywords[kw] = temp[1]
                 keyword_dict[count] = keywords
             count += 1
-    print(keyword_dict)
+    if len(keyword_dict) == 0:
+        print("No keywords found.")
     return keyword_dict
 
 
@@ -157,21 +206,19 @@ def sheetfill(qstates):
         qstates = [qstates]
     for state in qstates:
         startcol = 3
+        state_files = getonestatesfiles(state)
         state_ind = states.index(state)
-        laws = allfilenames[state_ind]
-        lawfilenames = []
-        for law in laws:
-            lawfilenames.append("./" + state + "/" + law)
         prefix = prefixes[state_ind]
+
         print(prefix)
-        print(lawfilenames)
+        print(state_files)
 
         keyword_dict = get_keywords(questions, use_stem)
 
         for q in questions:
             keywords = keyword_dict[q]
             print(keywords)
-            matches, count_dict, line_count = getmatches(keywords, lawfilenames, prefix, use_stem)
+            matches, count_dict, line_count = getmatches(keywords, state_files, prefix, use_stem)
             ranked = rankmatches(keywords, count_dict, line_count, matches, 1, use_stem)
             if len(ranked) > 0:
                 outr = ranked[0][1]
@@ -189,17 +236,17 @@ def sheetfill(qstates):
 
 def questionanswer(state, qnum, nmatches):
     use_stem = True
+    state_files = getonestatesfiles(state)
     state_ind = states.index(state)
-    laws = allfilenames[state_ind]
-    lawfilenames = []
-    for law in laws:
-        lawfilenames.append("./" + state + "/" + law)
     prefix = prefixes[state_ind]
+
+    print(prefix)
+    print(state_files)
     keyword_dict = get_keywords([int(qnum)], use_stem)
     print("Using keywords: ")
     keywords = keyword_dict[int(qnum)]
     print(keywords.keys())
-    matches, count_dict, line_count = getmatches(keywords, lawfilenames, prefix, use_stem)
+    matches, count_dict, line_count = getmatches(keywords, state_files, prefix, use_stem)
     ranked = rankmatches(keywords, count_dict, line_count, matches, nmatches, use_stem)
     for match in ranked:
         print(str(match[1]) + " (with score " + str(match[0]) + ")")
@@ -208,46 +255,32 @@ def questionanswer(state, qnum, nmatches):
 
         print("- - - - - - - - - - - - - -")
 
+def validanswer(question, again_prompt, is_invalid):
+    answer = input(question)
+    res, inv = is_invalid(answer)
+    while (inv):
+        print(again_prompt)
+        answer = input(question)
+        res, inv = is_invalid(answer)
+    return res
+
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
-        invalidState = True
-        while invalidState:
-            state = input("Enter the two-letter state abbreviation.")
-            if state in states:
-                invalidState = False
-            else:
-                print("Sorry, we don't have that state's files available yet.")
-        invalidq = True
-        while invalidq:
-            mode = input("Enter question number (type 'all' for spreadsheet fill).")
-            if mode == "all":
-                sheetfill(state)
-                invalidq = False
-            else:
-                try:
-                    mode = int(mode)
-                    if mode < 16 and mode > 0:
-                        invalidq = False
-                    else:
-                        print("Sorry, that's not a valid question number")
-                except e:
-                    print("Sorry, that's not a valid question number")
 
+        state = validanswer("Two-letter state abbreviation:",
+        "Unrecognized state abbreviation.",
+        lambda x : (x, False) if (x in states) else (None, True))
 
-                invalidq = True
-                while invalidq:
-                    nmatches = input("How many matches do you want to view?")
-                    try:
-                        nmatches = int(nmatches)
-                        if nmatches < 10 and nmatches > 0:
-                            invalidq = False
-                        else:
-                            print("Sorry, that's not a valid number of matches.")
-                    except e:
-                        print("Sorry, that's not a valid number of matches.")
+        question = validanswer("Question number (0 for spreadsheet fill):",
+        "Invalid question number.",
+        lambda x : (int(x), False) if (int(x) >= 0 and int(x) <= 16) else (None, True))
 
-                questionanswer(state, mode, nmatches)
+        nmatches = validanswer("Number of matches:",
+        "Invalid number of matches.",
+        lambda x : (int(x), False) if (int(x) >= 0 and int(x) <= 10) else (None, True))
+
+        questionanswer(state, question, nmatches)
 
     else:
         questionanswer(sys.argv[1], sys.argv[2], 3)
