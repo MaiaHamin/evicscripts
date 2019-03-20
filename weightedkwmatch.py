@@ -70,6 +70,7 @@ prefixes = [
 "W.S.1977 §"
 ]
 # filepath? /Volumes/eviction/Intern Dropbox/Landlord_Tenant_Project/Text/
+
 def getallstatesfiles():
     all_files = []
     for s in states:
@@ -77,6 +78,9 @@ def getallstatesfiles():
         all_files.append(state_files)
     return allfilenames
 
+# Looks for all of the files in the directory named "s" where s is a two-letter
+# state abbreviation. State files are stored in a directory "Text" in the
+# directory above the evicscript directory where this file lives.
 def getonestatesfiles(s):
     state_files = []
     print(os.path.join(os.getcwd(), "..", "Text", s))
@@ -92,33 +96,37 @@ def getonestatesfiles(s):
 def w_tokenize(s):
     return nltk.word_tokenize(s)
 
-def get_keywords(questions):
+# Loops through every row of the csv. For every row, the first column describes
+# the question, and all of the following columns hold keyword-weight pairs
+# in the format "key*weight". This separates them, stores the keyword as the
+# key to the weight in a dictionary, and then stores each of the dictionary
+# of key-weight pairs for each question into a dictionary of all questions
+
+def get_keywords():
     keyword_dict = {}
     with open('WeightedKeywords.csv', "rt") as csvfile:
         reader = csv.reader(csvfile)
         next(reader)
-        count = 1
+        qnum = 1
         for row in list(reader):
-            if (count in questions):
-                keywords = {}
-                for k in row[1:]:
-                    if (k != ""):
-                        temp = k.split("*")
-                        if len(temp) > 1:
-                            kw = temp[0]
-                            if use_stem:
-                                out = ""
-                                kwlist = kw.split()
-                                for k in kwlist:
-                                    if len(k) > 2:
-                                        ks = ps.stem(k)
-                                    else:
-                                        ks = k
-                                    out += ks + " "
-                                kw = out[:-1]
-                            keywords[kw] = temp[1]
-                keyword_dict[count] = keywords
-            count += 1
+            keywords = {}
+            for kw_pair_s in row[1:]:
+                if (kw_pair_s != ""):
+                    kw_pair = kw_pair_s.split("*")
+                    if len(kw_pair) > 1:
+                        k = kw_pair[0]
+                        weight = kw_pair[1]
+                        if use_stem:
+                            k_s = ""
+                            k_word_list = k.split()
+                            for k_word in k_word_list:
+                                k_word_stem = ps.stem(k_word)
+                                k_s += k_word_stem + " "
+                            k = k_s[:-1]
+                        keywords[k] = weight
+            keyword_dict[qnum] = keywords
+            qnum += 1
+
     if len(keyword_dict) == 0:
         print("WARNING: No keywords found.")
     return keyword_dict
@@ -164,8 +172,11 @@ def getmatches(keywords, lawfilenames, pref):
                         matches[sec] += "\n" + line
                     else:
                         matches[sec] = line
-    return matches, count_dict, line_count
+        return matches, count_dict, line_count
 
+# Ranks the matches by finding the sentence with the highest concentration
+# of keywords, where each occurence is weighted by the value specified in the
+# keyword file.
 def rankmatches(keywords, count_dict, line_count, matches, top_n):
     wrst_bst_keys = []
     for (sec, fulltext) in matches.items():
@@ -196,6 +207,7 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n):
 
     return wrst_bst_keys
 
+# Fills in an excel spreadsheet with all best-choice matches for a single state.
 def sheetfill(state):
     questions = [i for i in range(1, 17)]
     startrow = 0
@@ -204,7 +216,7 @@ def sheetfill(state):
     state_ind = states.index(state)
     prefix = prefixes[state_ind]
 
-    keyword_dict = get_keywords(questions)
+    keyword_dict = get_keywords()
 
     for q in questions:
         keywords = keyword_dict[q]
@@ -223,12 +235,12 @@ def sheetfill(state):
     startrow += 1
     outxl.save(os.path.join(os.getcwd(), "..", "Spreadsheets", state + ".xls"))
 
-
+# Answers a specific question with the nmatches best-match statutes
 def questionanswer(state, qnum, nmatches):
     state_files = getonestatesfiles(state)
     state_ind = states.index(state)
     prefix = prefixes[state_ind]
-    keyword_dict = get_keywords([int(qnum)])
+    keyword_dict = get_keywords()
     print("Using keywords: ")
     keywords = keyword_dict[int(qnum)]
     print(keywords.keys())
@@ -241,6 +253,7 @@ def questionanswer(state, qnum, nmatches):
 
         print("- - - - - - - - - - - - - -")
 
+# Helper function for getting valid parameters from user input
 def validanswer(question, again_prompt, is_invalid):
     answer = input(question)
     res, inv = is_invalid(answer)
@@ -250,7 +263,7 @@ def validanswer(question, again_prompt, is_invalid):
         res, inv = is_invalid(answer)
     return res
 
-
+# Main execution
 if __name__ == "__main__":
     if len(sys.argv) == 1:
 
