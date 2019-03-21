@@ -17,9 +17,9 @@ from collections import Counter
 
 
 # Add new states
-states = ["AK", "AL", "AR", "AZ", "CA", "CO", "DC", "DE", "FL", "IA", "ID", "IL", "IN",
-"KS", "LA", "MA", "MD", "ME", "MI", "MO", "MS", "MT", "ND", "NJ", "NM", "NV", "NY", "OH",
-"OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "VT", "WA", "WI", "WV", "WY"]
+states = ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN",
+"KS", "KY", "LA", "MA", "MD", "ME", "MI", "MO", "MS", "MT", "ND", "NJ", "NM", "NV", "NY", "OH",
+"OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "VA", "VT", "WA", "WI", "WV", "WY"]
 
 use_stem = True
 
@@ -33,14 +33,18 @@ prefixes = [
 "A.R.S. §",
 "West's Ann.Cal.Civ.Code §",
 "C.R.S.A. §",
+"C.G.S.A. §",
 "DC ST §",
 "25 Del.C. §",
 "West’s F.S.A. §",
+"Ga. Code Ann., §",
+"HRS §",
 "I.C.A. §",
 "I.C. §",
 "765 ILCS",
 "IC",
 "K.S.A.",
+"KRS §",
 "LSA-C.C.P.",
 "M.G.L.A. 183 §",
 "MD Code, Real Property, §",
@@ -63,6 +67,7 @@ prefixes = [
 "SDCL §",
 "T. C. A. §",
 "V.T.C.A., Property Code §",
+"VA Code Ann. §",
 "27 V.S.A. §",
 "West's RCWA",
 "W.S.A.",
