@@ -117,7 +117,7 @@ def stem_words(string):
 
 def get_keywords():
     keyword_dict = {}
-    with open('WeightedKeywords.csv', "rt",  encoding="utf8") as csvfile:
+    with open('WeightedKeywords.csv', "rt",  encoding="utf8", errors="ignore") as csvfile:
         reader = csv.reader(csvfile)
         next(reader)
         qnum = 1
@@ -149,7 +149,7 @@ def getmatches(keywords, lawfilenames, pref):
     pref_len = len(pref)
     line_count = 0
     for lawfile in lawfilenames:
-        with open (lawfile, 'r',  encoding="utf8") as f:
+        with open (lawfile, 'r',  encoding="utf8", errors="ignore") as f:
             last_sec = ""
             for line in f:
                 # Updates to a new section if statute prefix detected
