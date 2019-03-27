@@ -200,9 +200,10 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n):
                     if num_matches > bestscore:
                         bestsent = sent
                         bestscore = num_matches
-            wrst_bst_keys.append((bestscore, sec.replace("\n", " "), bestsent, fulltext))
-            wrst_bst_keys.sort(key=lambda k: k[0], reverse=True)
-            wrst_bst_keys = wrst_bst_keys[:min(len(wrst_bst_keys), top_n)]
+            if len(bestsent) > 1:
+                wrst_bst_keys.append((bestscore, sec.replace("\n", " "), bestsent, fulltext))
+                wrst_bst_keys.sort(key=lambda k: k[0], reverse=True)
+                wrst_bst_keys = wrst_bst_keys[:min(len(wrst_bst_keys), top_n)]
 
     return wrst_bst_keys
 
