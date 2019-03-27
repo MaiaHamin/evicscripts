@@ -104,7 +104,7 @@ def stem_words(string):
             wds.append(word.lower())
         return " ".join(wds)
     else:
-        return sent
+        return string
 
 # Loops through every row of the csv. For every row, the first column describes
 # the question, and all of the following columns hold keyword-weight pairs
@@ -191,16 +191,17 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n):
         bestsent = ""
         if len(fulltext) > 40:
             for sent in fulltext.split("."):
-                num_matches = 0.
-                length = float(len(sent))
-                stemline = stem_words(sent)
-                for word in keywords.keys():
-                    count = stemline.count(word)
-                    if (count > 0):
-                        num_matches += float(keywords[word]) * (float(count) * float(len(word))/ np.log(length)) * np.log (line_count / count_dict[word])
-                if num_matches > bestscore:
-                    bestsent = sent
-                    bestscore = num_matches
+                if len(sent) > 1:
+                    num_matches = 0.
+                    length = float(len(sent))
+                    stemline = stem_words(sent)
+                    for word in keywords.keys():
+                        count = stemline.count(word)
+                        if (count > 0):
+                            num_matches += float(keywords[word]) * (float(count) * float(len(word))/ np.log(length)) * np.log (line_count / count_dict[word])
+                    if num_matches > bestscore:
+                        bestsent = sent
+                        bestscore = num_matches
             wrst_bst_keys.append((bestscore, sec.replace("\n", " "), bestsent, fulltext))
             wrst_bst_keys.sort(key=lambda k: k[0], reverse=True)
             wrst_bst_keys = wrst_bst_keys[:min(len(wrst_bst_keys), top_n)]
@@ -248,7 +249,8 @@ def questionanswer(state, qnum, nmatches):
     ranked = rankmatches(keywords, count_dict, line_count, matches, nmatches)
     for match in ranked:
         print(str(match[1]) + " (with score " + str(match[0]) + ")")
-        outstr = match[3].replace(match[2], " ||| " + match[2] + " ||| ")
+        sentemph = match[3].replace(match[2], " ||| " + match[2] + " ||| ")
+        outstr = re.sub(r'(\n\s*\n)+', '\n', sentemph)
         print(outstr)
 
         print("- - - - - - - - - - - - - -")
