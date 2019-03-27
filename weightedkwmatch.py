@@ -7,9 +7,7 @@ import os
 from nltk.stem import PorterStemmer
 from nltk.tokenize import sent_tokenize, word_tokenize
 ps = PorterStemmer()
-from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
-stop_words = set(stopwords.words('english'))
 import numpy as np
 import sys
 import xlwt
@@ -294,4 +292,6 @@ if __name__ == "__main__":
 
 
     else:
+        if len(sys.argv) > 3 and sys.argv[3] == "F":
+            use_stem = False
         questionanswer(sys.argv[1], sys.argv[2], 3)
