@@ -181,7 +181,7 @@ def getmatches(keywords, lawfilenames, pref):
                     else:
                         matches[sec] = line
                 line_count += 1
-        return matches, count_dict, line_count
+    return matches, count_dict, line_count
 
 # Ranks the matches by finding the sentence with the highest concentration
 # of keywords, where each occurence is weighted by the value specified in the
