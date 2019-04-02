@@ -49,7 +49,7 @@ prefixes = [
 "14 M.R.S.A. §",
 "M.C.L.A.",
 "V.A.M.S.",
-"Miss. Code Ann. §",
+"Miss. Code Ann.",
 "MCA",
 "NDCC",
 "N.J.S.A.",
@@ -79,6 +79,8 @@ def getallstatesfiles():
     for s in states:
         state_files = getonestatesfiles(s)
         all_files.append(state_files)
+    print("Using files: ")
+    print(allfilenames)
     return allfilenames
 
 # Looks for all of the files in the directory named "s" where s is a two-letter
@@ -147,9 +149,10 @@ def getmatches(keywords, lawfilenames, pref):
     split_keys = []
     matches = {}
     pref_len = len(pref)
-    line_count = 0
     for lawfile in lawfilenames:
-        with open (lawfile, 'r',  encoding="utf8", errors="ignore") as f:
+        with open (lawfile, 'r',  encoding="ascii", errors="ignore") as f:
+            line_count = 0
+            print(lawfile)
             last_sec = ""
             for line in f:
                 # Updates to a new section if statute prefix detected
