@@ -45,7 +45,7 @@ prefixes = [
 "14 M.R.S.A. §",
 "M.C.L.A.",
 "V.A.M.S.",
-"Miss. Code Ann. §",
+"Miss. Code Ann.",
 "MCA",
 "NDCC",
 "N.J.S.A.",
