@@ -186,6 +186,48 @@ def getmatches(keywords, lawfilenames, pref):
                 line_count += 1
     return matches, count_dict, line_count
 
+
+def getmatches2(keywords, lawfilenames, pref):
+    count_dict = {}
+    for kw in keywords.keys():
+        count_dict[kw] = 0
+    split_keys = []
+    matches = {}
+    pref_len = len(pref)
+    for lawfile in lawfilenames:
+        with open (lawfile, 'r', errors="ignore") as f:
+            lines = str(f.read())
+            statutes = lines.split("Thomson Reuters. No claim to original U.S. Government Works.")
+            line_count = 0
+            last_sec = ""
+            for stat in statutes:
+                addto = False
+                lines = stat.split("\n")
+                # Updates to a new section if statute prefix detected
+                if len(lines) > 7:
+                    index = lines.index("Currentness")
+                    sec = "\n".join(lines[:index])
+                    for l in lines[index + 1:]:
+                        wds = stem_words(l)
+
+                        # If a word is present in the section, update its tf-idf counter
+                        for word in keywords:
+                            if wds.count(word) > 0:
+                                addto = True
+                                count_dict[word] += 1
+                        line_count += 1
+
+                # If a word is present in the section, add this statute to the
+                # list of candidates.
+
+                if addto:
+                    out = "\n".join(lines[index + 1:])
+                    if "\nCredits\n" in out:
+                        out = out[:out.index("\nCredits\n")]
+                    matches[sec] = out
+
+    return matches, count_dict, line_count
+
 # Ranks the matches by finding the sentence with the highest concentration
 # of keywords, where each occurence is weighted by the value specified in the
 # keyword file.
@@ -196,7 +238,7 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n):
         bestscore = 0
         bestsent = ""
         if len(fulltext) > 40:
-            for sent in fulltext.split("."):
+            for sent in fulltext.split("\n"):
                 if len(sent) > 1:
                     num_matches = 0.
                     length = float(len(sent))
@@ -209,7 +251,7 @@ def rankmatches(keywords, count_dict, line_count, matches, top_n):
                         bestsent = sent
                         bestscore = num_matches
             if len(bestsent) > 1:
-                wrst_bst_keys.append((bestscore, sec.replace("\n", " "), bestsent, fulltext))
+                wrst_bst_keys.append((bestscore, sec, bestsent, fulltext))
                 wrst_bst_keys.sort(key=lambda k: k[0], reverse=True)
                 wrst_bst_keys = wrst_bst_keys[:min(len(wrst_bst_keys), top_n)]
 
@@ -252,10 +294,12 @@ def questionanswer(state, qnum, nmatches):
     print("Using keywords: ")
     keywords = keyword_dict[int(qnum)]
     print(keywords.keys())
-    matches, count_dict, line_count = getmatches(keywords, state_files, prefix)
+    matches, count_dict, line_count = getmatches2(keywords, state_files, prefix)
     ranked = rankmatches(keywords, count_dict, line_count, matches, nmatches)
     for match in ranked:
-        print(str(match[1]) + " (with score " + str(match[0]) + ")")
+        outmatch = re.sub(r'(\n\s*\n)+', '\n', match[1])
+        print(outmatch)
+        print("\nWith score " + str(match[0]) + ":")
         sentemph = match[3].replace(match[2], " ||| " + match[2] + " ||| ")
         outstr = re.sub(r'(\n\s*\n)+', '\n', sentemph)
         print(outstr)
